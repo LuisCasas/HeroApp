@@ -27,6 +27,11 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
 
     public void loadPowerScreen(){
 
+        PickPowerFragment pickPowerFragment = new PickPowerFragment();
+       // getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, pickPowerFragment).commit();
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, pickPowerFragment).addToBackStack(null).commit();
+
+
     }
 
     @Override
@@ -36,6 +41,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
 
     @Override
     public void onPickPowerFragmentInteraction(Uri uri) {
-        
+
     }
 }
